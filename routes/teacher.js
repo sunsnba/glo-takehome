@@ -64,14 +64,14 @@ module.exports = function(req, res, next) {
           }
         }
         console.log("classesPayload", classesPayload);
-        // res.render instead of hbs
       });
     });
   });
+
   res.render("teacher", {
-    title: "Teachers Page" //,
-    //classes: classesPayload,
-    //teacher: teacherPayload
+    title: "Teachers Page",
+    classes: classesPayload,
+    teacher: teacherPayload
   });
 };
 //fs.writeFileSync('teacherClassData', teacherClassData);
