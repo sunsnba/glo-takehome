@@ -15,7 +15,6 @@ module.exports = function(req, res, next) {
       if (err) {
         return res.status(400).send(err);
       }
-
       const data = teacherData.data;
       const teacherPayload = {
         type: data.type,
@@ -63,15 +62,16 @@ module.exports = function(req, res, next) {
             });
           }
         }
-        console.log("classesPayload", classesPayload);
+        classesPayload.stringify = JSON.stringify(classesPayload);
+        teacherPayload.stringify = JSON.stringify(teacherPayload);
+        //console.log("classesPayload", classesPayload);
+        res.render("teacher", {
+          title: "Teachers Page",
+          classes: classesPayload.stringify,
+          teacher: teacherPayload.stringify
+        });
       });
     });
-  });
-
-  res.render("teacher", {
-    title: "Teachers Page",
-    classes: classesPayload,
-    teacher: teacherPayload
   });
 };
 //fs.writeFileSync('teacherClassData', teacherClassData);
