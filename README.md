@@ -16,7 +16,7 @@ Go to http://localhost:3000/
 
 # Auth Token
 
-In order to utilize the getAccessToken helper function from apiRequests.js I first needed to provide the proper Url, ClientCID, and Client Secret to the API. For security purposes these strings were added to the key.config - by adding this file to the gitignore there was no concern of others gaining access to the information, but I could still access the file locally to request the access token.
+In order to utilize the getAccessToken helper function from apiRequests.js I first needed to provide the proper Url, ClientCID, and Client Secret to the API. For security purposes these strings were added to the key.config instead of inserting them directly into apiRequests.js. I was able to use the api keys locally by importing the file. However, I added key.config to the gitignore to ensure that others couldn't gain access to these api keys.
 
 # Teacher data
 
