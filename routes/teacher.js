@@ -62,13 +62,11 @@ module.exports = function(req, res, next) {
             });
           }
         }
-        classesPayload.stringify = JSON.stringify(classesPayload);
-        teacherPayload.stringify = JSON.stringify(teacherPayload);
-        //console.log("classesPayload", classesPayload);
+        // console.log("teacher", teacherPayload);
         res.render("teacher", {
           title: "Teachers Page",
-          classes: classesPayload.stringify,
-          teacher: teacherPayload.stringify
+          classes: JSON.stringify(classesPayload),
+          teacher: JSON.stringify(teacherPayload)
         });
       });
     });
