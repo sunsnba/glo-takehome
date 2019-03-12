@@ -28,7 +28,7 @@ With the teacher data I was then able to get the classes the corresponded to tha
 
 # Rendering data with hbs
 
-In order to render the desired API data it was necessary to JSON.stringify the object data to display for the client. The data variables then needed to be added to the teacher.hbs file within the appropriate html tags.
+In order to render the desired API data it was necessary to JSON.stringify the object data to display for the client. The data variables then needed to be added to the teacher.hbs file within the appropriate html tags. Since I was not supposed to use the app.js file I did not register a helper function to stringify/format the object data. Another approach would be to iterate through the object data in the hbs file with the built-in "each" helper. 
 
 # Bonus
 
